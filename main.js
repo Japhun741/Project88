@@ -1,7 +1,7 @@
 var canvas = new fabric.Canvas('myCanvas');
 
 ball_y = 0;
-ball_x = 0
+ball_x = 0;
 hole_y = 400;
 hole_x = 800;
 
@@ -10,13 +10,13 @@ block_image_width = 5;
 block_image_height = 5;
 
 function load_img(){
-	fabric.Image.fromURL("golf-h1.png", function(Img) {
+	fabric.Image.fromURL("golf-h.png", function(Img) {
 		hole_obj = Img;
 		hole_obj.scaleToWidth(50);
 		hole_obj.scaleToWidth(50);
 		hole_obj.set ({
 			top:hole_y,
-			left : hole_x;
+			left:hole_x
 		});
 		canvas.add(hole_obj);
 	});
@@ -29,10 +29,10 @@ function new_image()
 	{
 		ball_obj = Img;
 		ball_obj.scaleToWidth(50);
-		ball_obj.scaleToWidth(50);
+		ball_obj.scaleToHeight(50);
 		ball_obj.set ({
-			top:hole_y,
-			left:hole_x;
+			top:ball_y,
+			left:ball_x
 		});
 		canvas.add(ball_obj);
 	});
